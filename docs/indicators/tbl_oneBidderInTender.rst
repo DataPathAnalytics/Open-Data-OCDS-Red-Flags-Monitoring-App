@@ -64,7 +64,7 @@ tbl_oneBidderInTender
 
 3.1. Выбираем предложения участников на лот: ``data.tender.lots.id`` входит в массив ``data.bids.details.relatedLots.id``. Из найденных берем только те предложения, у которых ``data.bids.details.status='active'``.
 
-3.2. Оставляем только те лоты, на которые подано всего по одному предложению на которые поданы предложения только от одного уникального ``data.bids.details.tenderers.id``.
+3.2. Оставляем только те лоты, на которые поданы предложения только от одного уникального ``data.bids.details.tenderers.id``.
 
 4. Выбираем идентификатор закупающей организации ``data.parties.id``, у которой ``data.parties.roles='procuringEntity'`` или ``data.parties.roles='buyer'``
 
