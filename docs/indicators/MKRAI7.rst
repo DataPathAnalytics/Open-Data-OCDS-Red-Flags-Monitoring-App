@@ -70,6 +70,7 @@ MKRAI7. Тендерные предложения на лот сильно (на
 Для расчета индикатора используются следующие поля API модуля системы гос. закупок:
 
 - ``data.tender.lots.id``
+- ``data.tender.lots.status``
 - ``data.bids.relatedLots.id``
 - ``data.bids.relatedLots.amount``
 - ``data.bids.status``
@@ -78,7 +79,7 @@ MKRAI7. Тендерные предложения на лот сильно (на
 Формула расчета
 ===============
 
-1. Для каждого лота конкурса определяем его идентификатор ``data.tender.lots.id``.
+1. Выбираем только активные лоты - ``data.tender.lots.status='active'``. Для каждого такого лота конкурса определяем его идентификатор ``data.tender.lots.id``.
 
 2. Находим предложения поставщиков (подрядчиков) на данный лот ``data.bids.relatedLots.id = data.tender.lots.id``.
 
