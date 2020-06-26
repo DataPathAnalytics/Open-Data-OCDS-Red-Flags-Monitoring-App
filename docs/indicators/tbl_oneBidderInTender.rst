@@ -62,7 +62,7 @@ tbl_oneBidderInTender
 
 3. Для каждого такого лота закупки делаем следующее.
 
-3.1. Выбираем предложения участников на лот: ``data.tender.lots.id`` входит в массив ``data.bids.details.relatedLots.id``. Из найденных берем только те предложения, у которых ``data.bids.details.status='active'``.
+3.1. Выбираем предложения участников на лот: ``data.tender.lots.id`` входит в массив ``data.bids.details.relatedLots.id``. Из найденных берем только те предложения, у которых ``data.bids.details.status='valid'``.
 
 3.2. Оставляем только те лоты, на которые поданы предложения только от одного уникального ``data.bids.details.tenderers.id``.
 
