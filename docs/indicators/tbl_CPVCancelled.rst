@@ -67,7 +67,7 @@ tbl_tbl_CPVCancelled
 
 4. Выбираем идентификатор закупающей организации - ``data.parties.id`` объекта, у которого ``data.parties.roles='procuringEntity'``
 
-5. Выбираем все лоты, у которых ``data.tender.lots.status='active'``. Для каждого такого лота проводим следующие действия.
+5. Выбираем все найденые в п.3 отмененные лоты. Для каждого такого лота проводим следующие действия.
 
 6. Для каждого лота выбираем все коды предметов закупки - ``data.tender.items.classification.id``, связанных с лотом по ``data.tender.items.relatedLot=data.tender.lots.id``
 
