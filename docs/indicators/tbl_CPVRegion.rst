@@ -66,7 +66,7 @@ tbl_CPVRegion
 
 4. Выбираем регион закупающей организации - ``data.parties.address.region`` объекта, у которого ``data.parties.roles='procuringEntity'``
 
-5. Выбираем все лоты, у которых ``data.tender.lots.status='active'``. Для каждого такого лота проводим следующие действия.
+5. Выбираем все лоты, у которых ``data.tender.lots.status='active'`` или ``data.tender.lots.status='complete'``. Для каждого такого лота проводим следующие действия.
 
 6. Для каждого лота выбираем все коды предметов закупки - ``data.tender.items.classification.id``, связанных с лотом по ``data.tender.items.relatedLot=data.tender.lots.id``
 
