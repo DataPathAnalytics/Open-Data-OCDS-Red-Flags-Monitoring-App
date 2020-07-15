@@ -47,7 +47,5 @@ tv_badQuality
 
 1. Если статус конкурса ``data.tender.status='active'``, но все лоты конкурса имеют статус ``data.tender.lots.status='cancelled'`` или ``data.tender.lots.status='unsuccessful'``, переменная принимает значение ``1``, расчет заканчивается.
 
-2. Если статус лота конкурса ``data.tender.lots.status='active'`` или ``data.tender.lots.status='complete'``, но максимальное ценовое предложение на лот (``data.bids.details.relatedLots.id=data.tender.lots.id``) ``data.bids.details.relatedLots.value.amount=0``, переменная принимает значение ``1``, расчет заканчивается.
-
-3. Если мы дошли до этого пункта, переменная принимает значение ``0``, расчет заканчивается.
+2. Если мы дошли до этого пункта, переменная принимает значение ``0``, расчет заканчивается.
 
