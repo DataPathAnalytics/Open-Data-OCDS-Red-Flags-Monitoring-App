@@ -86,7 +86,7 @@ MKRAI7. Тендерные предложения на лот сильно (на
 Формула расчета
 ===============
 
-1. Выбираем только активные лоты - ``data.tender.lots.status='active'``. Для каждого такого лота конкурса определяем его идентификатор ``data.tender.lots.id``.
+1. Выбираем только активные лоты - ``data.tender.lots.status='active'``, где максимальное ценовое предложение на лот (``data.bids.details.relatedLots.id=data.tender.lots.id``) ``data.bids.details.relatedLots.value.amount > 0``. Для каждого такого лота конкурса определяем его идентификатор ``data.tender.lots.id``.
 
 2. Находим предложения поставщиков (подрядчиков) на данный лот ``data.bids.relatedLots.id = data.tender.lots.id``.
 
