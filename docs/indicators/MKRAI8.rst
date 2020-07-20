@@ -93,7 +93,7 @@ MKRAI8. На конкурс (лот) закупающей организации
 
 2. Для каждого такого лота делаем следующее.
 
-2.1. Выбираем предложения участников на лот: ``data.tender.lots.id`` входит в массив ``data.bids.details.relatedLots.id``. Из найденных берем только те предложения, у которых ``data.bids.details.status='active'``. 
+2.1. Выбираем предложения участников на лот: ``data.tender.lots.id`` входит в массив ``data.bids.details.relatedLots.id``. Из найденных берем только те предложения, у которых ``data.bids.details.status='active'`` или ``data.bids.details.status='pending'``. 
 
 2.2. Из найденных предложений выбираем идентификаторы участников - ``data.bids.details.tenderers.id``.
 
