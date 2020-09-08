@@ -37,8 +37,13 @@ tv_badQuality
 - ``data.tender.lots.status``
 - ``data.tender.lots.id``
 - ``data.tender.status``
+- ``data.tender.statusDetails``
 - ``data.bids.details.relatedLots.id``
 - ``data.bids.details.relatedLots.value.amount``
+- ``data.tender``
+- ``data.tender.lots``
+- ``data.bids``
+- ``data.awards``
 
 
 ***************
@@ -47,5 +52,10 @@ tv_badQuality
 
 1. Если статус конкурса ``data.tender.status='active'``, но все лоты конкурса имеют статус ``data.tender.lots.status='cancelled'`` или ``data.tender.lots.status='unsuccessful'``, переменная принимает значение ``1``, расчет заканчивается.
 
-2. Если мы дошли до этого пункта, переменная принимает значение ``0``, расчет заканчивается.
+2. Переменная принимает значение ``1`` в одном из следующих случаев.
+2.1. Если в конкурсе отсутствует ``data.tender``, ``data.tender.lots``.
+2.2. Если стадия конкурса ``data.tender.statusDetails`` равна ``bidsOpened``, ``evaluationResultsPending``, ``evaluationComplete``, ``contractSigned`` и при этом  в конкурсе отсутствует блок ``data.bids``.
+2.3. Если стадия конкурса ``data.tender.statusDetails`` равна ``evaluationResultsPending``, ``evaluationComplete``, ``contractSigned`` и при этом  в конкурсе отсутствует блок ``data.awards``.
+
+3. Если мы дошли до этого пункта, переменная принимает значение ``0``, расчет заканчивается.
 
