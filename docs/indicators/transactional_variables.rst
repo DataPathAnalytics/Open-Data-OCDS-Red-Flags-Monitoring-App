@@ -6,4 +6,4 @@
    :caption: Список транзакционных переменных:
 
    tv_tenderCPVList
-   tv_badDataQuality
+   tv_badQuality
