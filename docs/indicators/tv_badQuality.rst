@@ -57,7 +57,7 @@ tv_badQuality
 2.2. Если стадия конкурса ``data.tender.statusDetails`` равна ``bidsOpened``, ``evaluationResultsPending``, ``evaluationComplete``, ``contractSigned`` и при этом  в конкурсе отсутствует блок ``data.bids``.
 2.3. Если стадия конкурса ``data.tender.statusDetails`` равна ``evaluationResultsPending``, ``evaluationComplete``, ``contractSigned`` и при этом  в конкурсе отсутствует блок ``data.awards``.
 
-3. При обновлении данных тендера, собираем список уже существующих в нем блоков: ``data.tender.items``, ``data.bids``, ``data.awards``, ``data.contracts``. Если хоть один из блоков находится в списке существующих, но отсутствует в обновлении, переменная принимает значение ``1``.
+3. При обновлении данных тендера, собираем список уже существующих в нем блоков: ``data.tender.items``, ``data.tender.lots``, ``data.bids``, ``data.awards``, ``data.contracts``. Если хоть один из блоков находится в списке существующих, но отсутствует в обновлении, переменная принимает значение ``1``.
 
 4. Если мы дошли до этого пункта, переменная принимает значение ``0``, расчет заканчивается.
 
